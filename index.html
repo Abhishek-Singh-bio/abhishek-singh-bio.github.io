@@ -80,24 +80,58 @@
     }
 
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      display: inline-grid;
+      grid-template-columns: auto 18px;
+      align-items: stretch;
+      column-gap: 9px;
       color: var(--ink);
-      font-weight: 750;
-      letter-spacing: -0.02em;
       white-space: nowrap;
+      line-height: 1;
     }
 
-    .brand-mark {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle at 35% 35%, #ffffff 0 3px, transparent 4px),
-        radial-gradient(circle at 66% 68%, var(--accent) 0 4px, transparent 5px),
-        linear-gradient(135deg, rgba(94,234,212,0.85), rgba(139,92,246,0.9));
-      box-shadow: 0 0 28px rgba(94, 234, 212, 0.35);
+    .brand-wordmark {
+      display: grid;
+      gap: 3px;
+      padding: 2px 0;
+    }
+
+    .brand-line {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 850;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .brand-line:first-child {
+      color: rgba(251,244,232,0.96);
+    }
+
+    .brand-line:nth-child(2) {
+      color: var(--accent);
+    }
+
+    .brand-amp {
+      color: rgba(251,244,232,0.58);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-style: italic;
+      font-weight: 500;
+      margin-right: 4px;
+    }
+
+    .brand-lab {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px 0;
+      border-left: 1px solid rgba(251,244,232,0.26);
+      color: rgba(251,244,232,0.78);
+      font-size: 0.64rem;
+      font-weight: 900;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
     }
 
     nav ul {
@@ -738,8 +772,11 @@
   <header>
     <div class="nav">
       <a class="brand" href="#home" aria-label="Molecular Biophysics and Genome Stability Lab home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>MBGS Lab</span>
+        <span class="brand-wordmark" aria-hidden="true">
+          <span class="brand-line">Molecular Biophysics</span>
+          <span class="brand-line"><span class="brand-amp">&amp;</span>Genome Stability</span>
+        </span>
+        <span class="brand-lab" aria-hidden="true">Lab</span>
       </a>
       <nav aria-label="Main navigation">
         <ul>
