@@ -81,9 +81,9 @@
 
     .brand {
       display: inline-grid;
-      grid-template-columns: auto 18px;
-      align-items: stretch;
-      column-gap: 9px;
+      grid-template-columns: auto auto;
+      align-items: center;
+      column-gap: 12px;
       color: var(--ink);
       white-space: nowrap;
       line-height: 1;
@@ -120,17 +120,16 @@
     }
 
     .brand-lab {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2px 0;
+      min-height: 34px;
+      padding-left: 12px;
       border-left: 1px solid rgba(251,244,232,0.26);
-      color: rgba(251,244,232,0.78);
-      font-size: 0.64rem;
-      font-weight: 900;
-      letter-spacing: 0.24em;
+      color: rgba(251,244,232,0.86);
+      font-size: 1.42rem;
+      font-weight: 950;
+      letter-spacing: -0.04em;
       text-transform: uppercase;
     }
 
@@ -198,10 +197,10 @@
       position: relative;
       max-width: var(--max);
       margin: 0 auto;
-      padding: 105px 22px 90px;
+      padding: 105px 26px 90px;
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 58px;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 46px;
       align-items: center;
     }
 
@@ -227,10 +226,11 @@
 
     h1 {
       margin: 0;
-      max-width: 820px;
-      font-size: clamp(2.85rem, 7vw, 6.4rem);
-      line-height: 0.95;
-      letter-spacing: -0.085em;
+      max-width: 900px;
+      font-size: clamp(2.45rem, 5.8vw, 5.35rem);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+      overflow: visible;
     }
 
     .hero h1 span {
