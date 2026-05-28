@@ -83,7 +83,7 @@
       display: inline-grid;
       grid-template-columns: auto auto;
       align-items: center;
-      column-gap: 12px;
+      column-gap: 14px;
       color: var(--ink);
       white-space: nowrap;
       line-height: 1;
@@ -91,16 +91,16 @@
 
     .brand-wordmark {
       display: grid;
-      gap: 3px;
-      padding: 2px 0;
+      gap: 7px;
+      padding: 1px 0;
     }
 
     .brand-line {
       display: block;
-      font-size: 0.82rem;
-      font-weight: 850;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
+      font-size: 1.05rem;
+      font-weight: 520;
+      letter-spacing: 0.055em;
+      text-transform: none;
     }
 
     .brand-line:first-child {
@@ -108,29 +108,29 @@
     }
 
     .brand-line:nth-child(2) {
-      color: var(--accent);
+      color: rgba(251,244,232,0.86);
     }
 
     .brand-amp {
-      color: rgba(251,244,232,0.58);
+      color: var(--accent);
       font-family: Georgia, 'Times New Roman', serif;
       font-style: italic;
       font-weight: 500;
-      margin-right: 4px;
+      margin-right: 6px;
     }
 
     .brand-lab {
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 34px;
-      padding-left: 12px;
-      border-left: 1px solid rgba(251,244,232,0.26);
-      color: rgba(251,244,232,0.86);
-      font-size: 1.42rem;
-      font-weight: 950;
-      letter-spacing: -0.04em;
-      text-transform: uppercase;
+      min-height: 52px;
+      padding-left: 18px;
+      border-left: 2px solid rgba(251,244,232,0.72);
+      color: rgba(251,244,232,0.96);
+      font-size: 3.15rem;
+      font-weight: 500;
+      letter-spacing: -0.095em;
+      text-transform: none;
     }
 
     nav ul {
@@ -708,6 +708,17 @@
     }
 
     @media (max-width: 720px) {
+      .brand-line {
+        font-size: 0.88rem;
+        letter-spacing: 0.03em;
+      }
+
+      .brand-lab {
+        font-size: 2.35rem;
+        min-height: 44px;
+        padding-left: 12px;
+      }
+
       .nav {
         align-items: flex-start;
         flex-direction: column;
